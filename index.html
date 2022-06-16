@@ -1,69 +1,88 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!--title exists at the tab level of the browser and nowhere else-->
-    <title>Learning HTML</title>
+    <title>HTML Forms</title>
 </head>
-<!--body exists in the main webpage and contains all our content-->
 <body>
 
-    <!--division tags seperates sections into their own divisions-->
-    <div>
-        <!--paragraph tags-->   <!--strong tag = bold-->
-        <p>HELLO <strong>WORLD</strong></p>
-        <!--small = smaller-->  <!--em tag = italic-->
-        <p><small>first</small> <em>page</em></p>
-        <!--anchor tag with a hyperlink reference-->
-        <a href="https://www.google.com">just google it</a>
-        <!--anchor tag that points to a different sub webpage of our website-->
-        <a href="about.html"><br><strong>Super Interesting</strong></a>
-    </div>
+    <h1>HTML Forms</h1>
+    <!--form wrapper field for our inputs-->
+    <form>
+        <!--label with for set equal to the username input field-->
+        <label for="username">enter username:</label>
+        <!--input field with type set equal to text so the user can enter text data-->
+        <input type="text" id="username" name="username" placeholder="username" required>
+        <!--id must be unique for this page, think of it as a variable name-->
 
-    <div>
-        <!--the larger the number the less important it is for the browser-->
-        <h1>heading 1</h1>
-        <h2>heading 2</h2>
-        <h3>heading 3</h3>
-        <h4>heading 4</h4>
-    </div>
+        <!--line breaks-->
+        <br><br>
 
-    <div>
-        <!--unordered list and ordered list are a wrapper for list tags-->
-        <ul>
-            <li>yoshi</li>
-            <li>luigi</li>
-            <li>toad</li>
-        </ul>
-    </div>
+        <label for="email">enter email:</label>
+        <input type="email" id="email" name="email" placeholder="your email" required>
 
-    <div>
-        <!--ordered list puts numbers instead of bullet points-->
-        <ol>
-            <li>yoshi</li>
-            <li>luigi</li>
-            <li>toad</li>
-            <li>test</li>
-        </ol>
-    </div>
+        <br><br>
 
-    <!--span tags are a way to add a css or js hook into a part of html-->
-    <span>I am a <br>span tag</span>
-    <!--br tag is a line break-->
+        <!--the name field is used by backend developers for processing on the server-->
+        <label for="password">enter password:</label>
+        <input type="password" id="password" name="password" placeholder="choose a password" required>
 
-    <!--horizontal rule, seperates content with a line-->
-    <hr>
+        <br><br>
 
-    <!--image tag uses the src or source argument to point to the image file path-->
-    <img src="/images/racattack4.PNG" alt="stinky racoon">
-    <!--alt tag is used for accessibility, screen readers will read off what is put inside-->
+        <!--radio button structure denoted by input type set equal to radio and uses
+        the name field to group these buttons together so that only one may be selected
+        at a time-->
+        <input type="radio" name="gender" value="male" required> Male<br>
+        <input type="radio" name="gender" value="female" required> Female<br>
+        <input type="radio" name="gender" value="other" required> Other
 
-    <!--blockquote lets us cite sources for the text it wraps-->
-    <blockquote cite="https://www.wikipedia.org">
-        rac attack
-    </blockquote>
+        <p><b>Note:</b>When a user clicks on a radio-button, it becomes checked,
+        and all other radio-buttons with equal name become unchecked. </p>
 
-    <!--modified p tag to include a bit of CSS styling-->
-    <p style="color: red;">get styled on</p>
+        <p>Select your age:</p>
+
+        <input type="radio" name="age" value="0-25" id="option-1" required>
+        <label for="option-1">0-25</label><br>
+
+        <input type="radio" name="age" value="26-50" id="option-1" required>
+        <label for="option-1">26-50</label><br>
+
+        <input type="radio" name="age" value="51-75" id="option-1" required>
+        <label for="option-1">51-75</label><br>
+
+        <input type="radio" name="age" value="76-100" id="option-1" required>
+        <label for="option-1">76-100</label>
+
+        <br><br>
+
+        <!--creates a drop down menu for the user to select their preferred security question
+        from-->
+        <label for="question">Security question:</label>
+        <select name="question" id="question">
+            <option value="q1">What color is your favorite pokemon?</option>
+            <option value="q2">What is your favorite vegetable?</option>
+            <option value="q3">What is your favorite password?</option>
+        </select>
+
+        <br><br>
+
+        <label for="answer">Security question answer:</label>
+        <input type="text" id="answer" name="answer" placeholder="type your security question" required>
+
+        <br><br>
+        
+        <!--creates a text area field for the user to input text into the cols is how
+        many collumns (how long) the box is and the rows is how many rows (how deep)
+        the box is-->
+        <label for="bio">Your bio:</label><br>
+        <textarea name="bio" id="bio" cols="30" rows="10" placeholder="about you..." required></textarea>
+        <!--placeholder puts some text in the box that disappears when the user types-->
+
+        <br><br>
+
+        <!--creates a submit button, value represents the text inside the button-->
+        <input type="submit" value="submit this dood">
+
+    </form>
 
 </body>
 </html>
