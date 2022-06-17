@@ -130,3 +130,52 @@ footer{
     padding: 10px;
     text-align: center;
 }
+/* pseudo classes */
+
+/* Note the a:hover ← anchor with a : in the middle to denote a pseudo class */
+nav li a:hover{
+    text-decoration: underline;
+}
+
+.images li:hover{
+    position: relative;
+    top: -4px;
+    /* ^ bottom: 4px , just a different way to write it */
+}
+
+/* when the form field is in focus do this */
+form input:focus{
+    border: 4px dashed #4B4B4B;
+    outline: none;
+}
+/* when input is valid do this */
+form input:valid{
+    border: 4px solid #71d300;
+}
+
+/* hits the first child of a parent class */
+/* nav li:first-child{
+    border: 3px solid #F63232;
+} */
+
+/* Note the p::first-line ← p element with a :: in the middle to denote a psuedo element*/
+/* :: injects a pseudo element into the actual element */
+article p::first-line{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* section.join p::first-letter{
+    font-weight: bold;
+    font-size: 1.2em;
+} */
+
+p::selection{
+    background-color: #F63232;
+    color: white;
+}
+
+/* injects content after the element */
+p::after{
+    content: '...'
+}
