@@ -1,16 +1,55 @@
-span{
-    /* display: block; */
-    /* inline elements cannot have a margin on the top or bottom */
-    display: inline-block;
-    /* inline-block kind of mixes the two kinds of elements */
-    margin: 20px;
-    padding: 20px;
-}
-div{
-    /* display: inline; */
-    border: 2px solid crimson;
-    margin: 20px;
-    padding: 20px;
+/* p.error{
+    color:red;
 }
 
-/* the default browser styles can be overriden */
+p.something{
+    color:green;
+}
+
+p.something.error{
+    color:blue;
+    border: 1px dashed;
+}
+#content{
+    background-color: #ebebeb;
+    padding: 20px;
+} */
+
+/* div p{
+    color:purple;
+} */
+
+/* a[href*="about"]{
+    background-color: teal;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+a[href*="index"]{
+    background-color: orange;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+a[href$=".com"]{
+    color:red;
+} */
+
+div{
+    color: lightcoral;
+    border: 1px solid grey;
+    margin: 40px;
+    font-weight: bold;
+}
+div p{
+    border: inherit;
+    margin: inherit;
+    color:crimson;
+}
+p{
+    color:orange;
+}
